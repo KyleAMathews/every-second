@@ -24,9 +24,9 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   setInterval(() => {
     let newerDate = new Date()
     let diff = differenceInMilliseconds(newerDate, newDate)
-    if (diff > 1000) {
+    if (diff > 10000) {
       newDate = newerDate
       createNodeShop(newDate)
     }
-  }, 10)
+  }, 1000)
 }
