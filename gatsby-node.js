@@ -25,6 +25,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     let newerDate = new Date()
     let diff = differenceInMilliseconds(newerDate, newDate)
     if (diff > 10000) {
+      console.log(`updating`)
       newDate = newerDate
       createNodeShop(newDate)
     }
